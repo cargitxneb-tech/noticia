@@ -56,6 +56,10 @@ body {
     border-radius: 12px;
     margin: 0px 0;
     position: relative;
+ position: sticky;
+  top: 70px; /* Se queda pegada a la parte superior cuando se desplaza */
+  z-index: 1000; /* Asegura que se quede encima de otros elementos */
+  transition: top 0.3s ease-in-out; /* Transición suave (opcional) */
 }
 
 /* Logo */
@@ -222,6 +226,9 @@ body {
         border-radius: 12px;
         margin: 0px 0;
         position: relative;
+        top: 70px; /* Se queda pegada a la parte superior cuando se desplaza */
+  z-index: 1000; /* Asegura que se quede encima de otros elementos */
+  transition: top 0.3s ease-in-out; /* Transición suave (opcional) */
     }
 
     #menu-container .logo {
