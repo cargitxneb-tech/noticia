@@ -70,7 +70,7 @@ body {
 }
 
 #menu2-container .logo:hover {
-    color: #123961;
+    color: #ffffff;
 }
 
 #menu2-container .logo i {
@@ -213,7 +213,7 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 10px 10px;
-        background-color: #1D0D88;
+        background-color: #4B2D8C;
         color: black;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         border-radius: 12px;
@@ -224,7 +224,7 @@ body {
     #menu-container .logo {
         font-size: 42px;
         font-weight: 800;
-        color: #184370;
+        color: #ffffff;
         text-transform: uppercase;
         cursor: pointer;
         transition: color 0.3s ease;
@@ -234,7 +234,7 @@ body {
     }
 
     #menu-container .logo:hover {
-        color: #123961;
+        color: #ffffff;
     }
 
     #menu-container .logo i {
@@ -248,7 +248,7 @@ body {
         top: 65px;
         left: 0;
         right: 0;
-        background-color: #1D0D88;
+        background-color: #4B2D8C;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         padding: 10px;
         border-radius: 8px;
@@ -277,7 +277,7 @@ body {
     }
 
     #menu-container .menu-horizontal > div:hover {
-        color: #123961;
+        color: #4B2D8C;
         transform: translateY(-2px);
     }
  
