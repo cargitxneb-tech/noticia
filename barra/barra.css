@@ -6,6 +6,8 @@ body {
     width: 100%;
     min-width: 322px;
     max-width: 1200px; /* Establece el ancho máximo */
+    margin-left: auto; /* Centra el contenido */
+    margin-right: auto; /* Centra el contenido */
 }
 
 .anuncio {
