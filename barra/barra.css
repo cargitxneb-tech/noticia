@@ -1,4 +1,4 @@
-hola sin cambiar o modificar otra xosa eso body {
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: #F1F1F1;
@@ -59,7 +59,7 @@ hola sin cambiar o modificar otra xosa eso body {
 #menu2-container .logo {
     font-size: 36px;
     font-weight: 800;
-    color: #ffffff;
+    color: #4B2D8C;
     text-transform: uppercase;
     cursor: pointer;
     transition: color 0.3s ease;
