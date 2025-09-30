@@ -148,23 +148,6 @@ body {
     background-color: #f1f1f1;
 }
 
-#menu2-container .btn {
-    background-color: #184370;
-    color: white;
-    padding: 12px 18px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    margin-left: -10%;
-}
-
-#menu2-container .btn:hover {
-    background-color: #184370;
-    transform: translateY(-3px);
-}
-
 /* Menú toggle */
 #menu2-container .menu-toggle {
     font-size: 30px;
@@ -176,14 +159,7 @@ body {
         font-size: 30px;
         gap: 8px;
     }
-
-    #menu2-container .btn {
-        padding: 12px 16px;
-        font-size: 14px;
-        border-radius: 18px;
-        margin-left: -10%;
-    }
-}
+  }
 
 @media (max-width: 355px) {
     #menu2-container .logo {
@@ -196,13 +172,6 @@ body {
         align-items: center;
         gap: 8px;
         margin-left: 0%;
-    }
-
-    #menu2-container .btn {
-        padding: 12px 12px;
-        font-size: 14px;
-        border-radius: 18px;
-        margin-left: -10%;
     }
 
     #menu2-container .logo i {
@@ -344,22 +313,6 @@ body {
         background-color: #f1f1f1;
     }
  
-    #menu-container .btn {
-        background-color: #184370;
-        color: white;
-        padding: 12px 25px;
-        font-size: 20px;
-        font-weight: 600;
-        border-radius: 25px;
-        text-decoration: none;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    #menu-container .btn:hover {
-        background-color: #184370;
-        transform: translateY(-3px);
-    }
-
     /* Estilos adicionales para #menu-container */
     #menu-container {
         position: relative;
