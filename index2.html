@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fuentes y otros recursos -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Enlace a tu archivo CSS externo -->
+    <link rel="stylesheet" href="barra/barra.css">
+</head>
+<body>
+
+    <!-- Anuncio -->
+    <div class="anuncio">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8980056699793558" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8980056699793558" data-ad-slot="8577461929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+    </div>
+
+    <!-- Aquí se inyecta el contenido del menú desde barra/barra.html -->
+        <div id="dev"></div>
+
+
+  <style>
+    body {
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: ;
+    }
+
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px; /* Mayor separación entre los recuadros */
+      width: 100%;
+      max-width: 1500px; /* Maximo tamaño para que los recuadros no se estiren demasiado */
+      padding: 20px;
+      box-sizing: border-box;
+      flex-wrap: wrap; /* Permite que los recuadros se ajusten si no hay espacio suficiente */
+    }
+
+    a.recuadro-enlace {
+      text-decoration: none;
+      color: inherit;
+      flex: 1 1 calc(33% - 30px); /* 3 recuadros en fila, con margen entre ellos */
+      max-width: 480px; /* Tamaño máximo de cada recuadro */
+    }
+
+    .recuadro {
+      background-color: #ffffff;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .recuadro:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .rectangulos {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .rectangulo {
+      padding: 0px 20px 0px 10px;
+      height: 30px;
+      background-color: #dddddd;
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: #0d021a;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .rectangulo.icono {
+      background-color: #dddddd;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 12px;
+      color: #0d021a;
+    }
+
+    .imagen {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: -5px;
+    }
+
+    .textos {
+      width: 100%;
+      text-align: left;
+    }
+
+    .textos h3 {
+      margin: 5px 0;
+      font-size: 11px;
+      color: #1f4fbf;
+    }
+
+    .textos h1 {
+      margin: 5px 0;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .textos h2 {
+      margin: 5px 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    /* Estilo para la sección de "Quién lo publicó" */
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .footer-info .author {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-info .author i {
+      margin-right: 5px;
+      font-size: 16px; /* Mantengo el tamaño del autor como estaba */
+      color: #888; /* Color gris */
+    }
+
+    .footer-info .share {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .footer-info .share i {
+      margin-left: 10px;
+      font-size: 20px; /* Hago el ícono de compartir más grande */
+      color: #888; /* Color gris similar al del autor */
+    }
+
+    /* Estilo para el contenedor invisible detrás del título */
+.contenedor-titulo {
+  width: 100%;
+  padding: 0px 0; /* Puedes ajustar el padding según necesites */
+  background-color: transparent; /* Hace que el contenedor sea invisible */
+  display: flex;
+  justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+/* Estilo para el título "Noticia" */
+.titulo-noticia {
+  font-size: 48px; /* Más grande */
+  font-weight: 600;
+  color: #000; /* Negro */
+  text-align: left; /* Alineado a la izquierda */
+  margin: 0; /* Elimina cualquier margen del título */
+   margin-left: 3%; /* Añadir espacio a la izquierda */
+}
+    /* Estilo para la línea horizontal */
+    .linea {
+      width: 90%;
+      height: 2px;
+      background-color: #000000;
+      margin: 0px 0; /* Espacio por encima y debajo de la línea */
+    }
+  </style>
+</head>
+<body>
+
+
+ <!-- Contenedor invisible detrás del título -->
+<div class="contenedor-titulo">
+  <div class="titulo-noticia">Noticia</div>
+</div>
+
+
+  <div class="contenedor">
+    <!-- Primer recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Segundo recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Tercer recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+ <!-- Línea horizontal -->
+  <div class="linea"></div> 
+  
+   <!-- Contenedor invisible detrás del título -->
+<div class="contenedor-titulo">
+  <div class="titulo-noticia">Noticia</div>
+</div>
+
+
+  <div class="contenedor">
+    <!-- Primer recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Segundo recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Tercer recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+ <!-- Línea horizontal -->
+  <div class="linea"></div> 
+  
+   <!-- Contenedor invisible detrás del título -->
+<div class="contenedor-titulo">
+  <div class="titulo-noticia">Noticia</div>
+</div>
+
+
+  <div class="contenedor">
+    <!-- Primer recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Segundo recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Tercer recuadro -->
+    <a href="https://www.ejemplo.com" class="recuadro-enlace">
+      <div class="recuadro">
+        <div class="rectangulos">
+          <div class="rectangulo">Noticia</div>
+          <div class="rectangulo icono">
+            <i class="fas fa-calendar-alt"></i>
+            <span style="margin-left: 5px;">Hoy</span>
+          </div>
+        </div>
+        <img src="https://media.istockphoto.com/id/1795167728/es/foto/crecimiento-en-los-negocios-y-las-finanzas-crecimiento-de-gr%C3%A1ficos-y-tablas.jpg?s=612x612&w=0&k=20&c=_Fe2EP-kZdto7UEA73ZAVhn8-dACoTgqo7gunKCfa-k=" alt="Imagen adaptable" class="imagen">
+      
+        <div class="textos">
+          <h3>Informe financiero mensual</h3>
+          <h1>Crecimiento del 25% en el último trimestre</h1>
+          <h2>Descubre las claves detrás de estos resultados</h2>
+        </div>
+        
+        <div class="footer-info">
+          <div class="author">
+            <i class="fas fa-user"></i>
+            <span>Autor</span>
+          </div>
+          <div class="share">
+            <i class="fas fa-share-alt"></i> 
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+ <!-- Línea horizontal -->
+  <div class="linea"></div> 
+
+
+    <!-- Cargar el archivo JavaScript de la barra -->
+    <script src="barra/barra.js"></script>
+
+    <!-- Inyectar el archivo barra/barrapc.html con JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('barra/barrapc.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Inyectar el contenido de barra/barrapc.html en el div con id="dev"
+                    document.getElementById('dev').innerHTML = data;
+                    
+                    // Inicializar los menús una vez se haya inyectado el contenido
+                    initMenu();  // Para el menú de escritorio
+                    initMenu2(); // Para el menú móvil
+                })
+                .catch(error => {
+                    console.error("Error al cargar el archivo barra/barrapc.html:", error);
+                });
+        });
+    </script>
+    
+</body>
+</html>
