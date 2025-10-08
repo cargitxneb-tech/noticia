@@ -1,4 +1,4 @@
-// Función para inicializar el menú de escritorio
+	// Función para inicializar el menú de escritorio
 function initMenu() {
     // Variables
     const logo = document.querySelector('#menu-container .logo');
@@ -104,48 +104,55 @@ function initMenu2() {
     });
 }
 
-// Función para manejar el scroll y cambiar la posición de los menús
-function handleScroll() {
-    const menuContainer = document.getElementById('menu-container');
-    const menu2Container = document.getElementById('menu2-container');
-    const scrollPosition = window.scrollY;
-
-    // Cambiar posición de #menu-container cuando la pantalla es menor o igual a 580px
-    if (window.innerWidth <= 580) {
-        toggleFixedPosition(menuContainer, scrollPosition, 55);
-    }
-
-    // Cambiar posición de #menu2-container cuando la pantalla es mayor o igual a 900px
-    if (window.innerWidth >= 900) {
-        toggleFixedPosition(menu2Container, scrollPosition, 75);
-    }
-
-    // Cambiar posición de #menu-container y #menu2-container cuando la pantalla está entre 600px y 850px
-    if (window.innerWidth > 600 && window.innerWidth <= 850) {
-        toggleFixedPosition(menuContainer, scrollPosition, 65);
-        toggleFixedPosition(menu2Container, scrollPosition, 65);
-    }
-}
-
-// Función reutilizable para cambiar la posición de un menú
-function toggleFixedPosition(menu, scrollPosition, threshold) {
-    if (!menu) return;
-
-    if (scrollPosition > threshold) {
-        menu.style.position = 'fixed';
-        menu.style.top = '0';
-        menu.style.width = '100%'; // Asegura que ocupe todo el ancho
-    } else {
-        menu.style.position = 'relative';
-        menu.style.top = 'auto';
-    }
-}
-
 // Llamar a las funciones para inicializar los menús una vez cargue el DOM
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();  // Inicializa el menú de escritorio
     initMenu2(); // Inicializa el menú móvil
 });
 
-// Escuchar el evento scroll para manejar el cambio de posición de los menús
-window.addEventListener('scroll', handleScroll);
+window.addEventListener('scroll', function() {
+    const menuContainer = document.getElementById('menu-container');
+    const menu2Container = document.getElementById('menu2-container');
+    const scrollPosition = window.scrollY;
+
+    // Cambiar posición de #menu-container cuando la pantalla es menor o igual a 580px
+    if (window.innerWidth <= 580) {
+        if (scrollPosition > 55) {
+            menuContainer.style.position = 'fixed';
+            menuContainer.style.top = '0';
+            menuContainer.style.width = '100%'; // Asegura que ocupe todo el ancho
+        } else {
+            menuContainer.style.position = 'relative';
+            menuContainer.style.top = 'auto';
+        }
+    }
+
+    // Cambiar posición de #menu2-container cuando la pantalla es mayor o igual a 900px
+    if (window.innerWidth >= 900) {
+        if (scrollPosition > 75) {
+            menu2Container.style.position = 'fixed';
+            menu2Container.style.top = '0';
+            menu2Container.style.width = '100%'; // Asegura que ocupe todo el ancho
+        } else {
+            menu2Container.style.position = 'relative';
+            menu2Container.style.top = 'auto';
+        }
+    }
+
+    // Cambiar posición de #menu-container y #menu2-container cuando la pantalla está entre 600px y 850px
+    if (window.innerWidth > 600 && window.innerWidth <= 850) {
+        if (scrollPosition > 65) {
+            menuContainer.style.position = 'fixed';
+            menuContainer.style.top = '0';
+            menuContainer.style.width = '100%'; // Asegura que ocupe todo el ancho
+            menu2Container.style.position = 'fixed';
+            menu2Container.style.top = '0';
+            menu2Container.style.width = '100%'; // Asegura que ocupe todo el ancho
+        } else {
+            menuContainer.style.position = 'relative';
+            menuContainer.style.top = 'auto';
+            menu2Container.style.position = 'relative';
+            menu2Container.style.top = 'auto';
+        }
+    }
+});
