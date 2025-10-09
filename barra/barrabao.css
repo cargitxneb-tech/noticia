@@ -1,0 +1,64 @@
+/* General */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif; /* Aplicamos la fuente Open Sans */
+}
+
+/* Rectángulo con fondo blanco y línea divisoria */
+#news-carousel .rectangulo {
+  width: 100%;
+  height: 20px; /* Alto de 20px */
+  background-color: #ffffff; /* Color de fondo blanco */
+  overflow: hidden; /* Oculta cualquier contenido fuera del rectángulo */
+  position: relative;
+  border-bottom: 1.5px solid #ccc; /* Línea divisoria debajo del rectángulo */
+}
+
+/* Contenedor de los enlaces */
+#news-carousel .carousel-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  animation: scroll 30s linear infinite; /* Animación continua */
+}
+
+/* Cada enlace */
+#news-carousel .carousel-item {
+  flex-shrink: 0;
+  margin-right: 20px; /* Espacio entre los elementos */
+}
+
+#news-carousel a {
+  color: #1D5987; /* Azul más oscuro */
+  text-decoration: none; /* Elimina el subrayado */
+  font-weight: bold;
+  display: inline-block; /* Para que los enlaces se comporten como bloques */
+  border: none; /* Asegura que no haya bordes */
+  outline: none; /* Elimina cualquier borde que pueda aparecer al hacer clic */
+  padding: 0; /* Elimina el relleno extra */
+  font-size: 16px; /* Tamaño de fuente de los enlaces */
+}
+
+/* Animación: Desplazamiento suave */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Desplazamiento completo hacia la izquierda */
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  #news-carousel .carousel-container {
+    display: block;
+    width: 200%; /* Aumenta el tamaño de la lista para permitir desplazamiento */
+  }
+  #news-carousel .carousel-item {
+    display: inline-block;
+    margin-right: 16px;
+  }
+}
