@@ -55,7 +55,7 @@
                 if (!response.ok) throw new Error('No se pudo cargar el archivo.');
 
                 const html = await response.text(); // Obtener el contenido HTML
-                document.getElementById('contenido').innerHTML = html; // Insertarlo en el div
+                document.getElementById('abajo').innerHTML = html; // Insertarlo en el div
 
             } catch (error) {
                 console.error('Error al cargar el archivo:', error);
