@@ -11,6 +11,7 @@
 
     <!-- Enlace a tu archivo CSS externo -->
     <link rel="stylesheet" href="barra/barra.css">
+      <link rel="stylesheet" href="barra/barrabajo.css">
 </head>
 <body>
 
@@ -23,7 +24,8 @@
 
     <!-- Aquí se inyecta el contenido del menú desde barra/barra.html -->
         <div id="dev"></div>
-
+        <div id="abajo"></div> <!-- Aquí se insertará el contenido HTML externo -->
+    
     <!-- Cargar el archivo JavaScript de la barra -->
     <script src="barra/barra.js"></script>
 
@@ -44,6 +46,25 @@
                     console.error("Error al cargar el archivo barra/barrapc.html:", error);
                 });
         });
+    </script>
+       <script>
+        // Función para cargar un archivo HTML
+        async function cargarHTML() {
+            try {
+                const response = await fetch('barra/barrabajo.html'); // Ruta del archivo HTML externo
+                if (!response.ok) throw new Error('No se pudo cargar el archivo.');
+
+                const html = await response.text(); // Obtener el contenido HTML
+                document.getElementById('contenido').innerHTML = html; // Insertarlo en el div
+
+            } catch (error) {
+                console.error('Error al cargar el archivo:', error);
+                document.getElementById('abajo').innerHTML = '<p>Error al cargar el contenido.</p>';
+            }
+        }
+
+        // Llamar a la función para cargar el archivo cuando cargue la página
+        window.onload = cargarHTML;
     </script>
     
 </body>
