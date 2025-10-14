@@ -1,0 +1,593 @@
+   #contenedor-abajo   body {
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+	
+	   #contenedor-abajo a.recuadro-enlace  {
+      text-decoration: none;
+      color: inherit;
+       
+	}
+
+       #conte   a.recuadro-enlace,  #conte   a.recuadro-enlace1  {
+      text-decoration: none;
+      color: inherit;
+       width: 100%;
+	}
+
+      #conte body {
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+      #conte  .contenedor-recuadros {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    /* Recuadro principal más ancho */
+     #conte  .recuadro {
+      width: 100%;  /* Ocupa el mismo ancho que los dos recuadros de abajo */
+      background-color: #ffffff;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+    
+    }
+
+    /* Estilo para los recuadros inferiores */
+    #conte  .recuadro-secundario {
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #conte  .rectangulos {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+     #conte .rectangulo {
+      padding: 0px 20px 0px 10px;
+      height: 30px;
+      background-color: #dddddd;
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: #0d021a;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    #conte    .rectangulo.icono {
+      background-color: #dddddd;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 12px;
+      color: #0d021a;
+    }
+
+    #conte    .imagen {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: -5px;
+    }
+     #conte  .imagen-principal {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: -5px;
+    }
+
+    #conte    .textos {
+      width: 100%;
+      text-align: left;
+	   display: block; /* Hace que el enlace ocupe todo el área del contenedor de texto */
+    }
+
+   #conte     .textos h3 {
+      margin: 5px 0;
+      font-size: 11px;
+      color:  #0056b3;
+    }
+
+   #conte     .textos h1 {
+      margin: 5px 0;
+      font-size: 22px;
+      color: #333;
+	     text-decoration: none;
+    }
+  #conte     .textos h1 a{
+      margin: 5px 0;
+      
+      color: #333;
+	     text-decoration: none;
+    }
+	
+   #conte     .textos h2 {
+      margin: 5px 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    /* Estilo para la sección de "Quién lo publicó" */
+     #conte   .footer-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+     #conte   .footer-info .author {
+      display: flex;
+      align-items: center;
+    }
+
+     #conte   .footer-info .author i {
+      margin-right: 5px;
+      font-size: 16px;
+      color: #888;
+    }
+
+     #conte   .footer-info .share {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+     #conte   .footer-info .share i {
+      margin-left: 10px;
+      font-size: 20px;
+      color: #888;
+    }
+
+    /* Estilo para el contenedor de los recuadros inferiores */
+    #conte   .contenedor-secundarios {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos para el anuncio */
+   #conte   .anuncio {
+      width: 100%;
+      background-color: #d1d1d1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 700px;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+	
+	   #conte  {
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 0px;
+      background-color: none;
+      flex-wrap: wrap;
+      width: 100%; /* Recuadro principal más ancho */
+    }
+
+    /* Eliminar el fondo del contenedor principal */
+    #conte    .todo {
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 20px;
+      background-color: none;
+      flex-wrap: wrap;
+       width: 100%; /* Recuadro principal más ancho */
+    }
+
+   #conte     .recuadro-anuncio {
+      width: 18%; /* Ajustar al tamaño del anuncio */
+    }
+
+    #conte    .contenido {
+      width: 80%; /* Recuadro principal más ancho */
+    }
+	
+	   @media (max-width: 900px) {
+    /* Eliminar el fondo del contenedor principal */
+    #conte    .todo {
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 20px;
+      background-color: none;
+      flex-wrap: wrap;
+       width: 100%; /* Recuadro principal más ancho */
+    }
+
+   #conte     .recuadro-anuncio {
+      width: 100%; /* Ajustar al tamaño del anuncio */
+    }
+
+     #conte   .contenido {
+      width: 100%; /* Recuadro principal más ancho */
+    }
+        }
+ @media (max-width: 500px) {
+  /* Cambiar la dirección de los recuadros para que estén en columna */
+    #conte  .contenedor-recuadros {
+    flex-direction: column;
+    gap: 3px;  /* Espaciado entre los recuadros */
+  }
+
+   #conte   .recuadro, .recuadro-secundario {
+    width: 100%; /* Hacer que cada recuadro ocupe el 100% del ancho */
+    padding: 10px; /* Ajustar el espaciado */
+  }
+
+   #conte   .imagen,    #conte   .imagen-principal {
+    height: 140px; /* Reducir la altura de las imágenes */
+	 margin-bottom: -5px;
+  }
+
+    #conte  .textos h1 {
+    font-size: 18px; /* Reducir tamaño del título */
+  }
+
+   #conte   .textos h3 {
+    font-size: 8px; /* Reducir tamaño del subtítulo */
+
+  }
+  
+   #conte  .imagen-principal {
+      margin-bottom: -10px;
+    }
+
+  /* Ajustar el contenedor de los recuadros secundarios */
+   #conte   .contenedor-secundarios {
+    flex-direction: column;  /* Asegurar que los recuadros secundarios estén en columna */
+    gap: 14px;
+  }
+
+  /* Asegurarse de que el anuncio ocupe todo el ancho en pantallas pequeñas */
+     #conte .recuadro-anuncio {
+    width: 100%;
+  }
+      #conte    .todo {
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 2px;
+      background-color: none;
+      flex-wrap: wrap;
+       width: 100%; /* Recuadro principal más ancho */
+    }
+	   #conte  {
+      background-color: #ffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+    }
+	
+	 #conte  .linea {
+    width: 99%;      /* Ajusta el ancho de la línea */
+    border: 0;        /* Elimina el borde predeterminado */
+    border-top: 1px solid #000; /* Establece el grosor y color de la línea */
+    margin: 0px auto;  /* Centra la línea en la página y agrega un margen superior e inferior */
+}
+
+    #conte .rectangulo {
+      font-size: 10px;
+	     padding: -5px 5px -5px 5px;
+    }
+
+    #conte    .rectangulo.icono {
+      font-size: 10px;
+    }
+
+}
+
+
+  #contenedor-abajo .contenedor-recuadros {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    #contenedor-abajo .recuadro {
+      width: 100%;  /* Ocupa el mismo ancho que los dos recuadros de abajo */
+      background-color: #ffffff;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #contenedor-abajo .recuadro-secundario {
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #contenedor-abajo .rectangulos {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    #contenedor-abajo .rectangulo {
+      padding: 0px 20px 0px 10px;
+      height: 30px;
+      background-color: #dddddd;
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: #0d021a;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    #contenedor-abajo .rectangulo.icono {
+      background-color: #dddddd;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 12px;
+      color: #0d021a;
+    }
+
+    #contenedor-abajo .imagen {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: -5px;
+    }
+
+    #contenedor-abajo .textos {
+      width: 100%;
+      text-align: left;
+    }
+
+    #contenedor-abajo .textos h3 {
+      margin: 5px 0;
+      font-size: 11px;
+      color: #1f4fbf;
+    }
+
+    #contenedor-abajo .textos h1 {
+      margin: 5px 0;
+      font-size: 22px;
+      color: #333;
+    }
+
+    #contenedor-abajo .textos h2 {
+      margin: 5px 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    #contenedor-abajo .footer-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    #contenedor-abajo .footer-info .author {
+      display: flex;
+      align-items: center;
+    }
+
+    #contenedor-abajo .footer-info .author i {
+      margin-right: 5px;
+      font-size: 16px;
+      color: #888;
+    }
+
+    #contenedor-abajo .footer-info .share {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    #contenedor-abajo .footer-info .share i {
+      margin-left: 10px;
+      font-size: 20px;
+      color: #888;
+    }
+
+    #contenedor-abajo .contenedor-secundarios {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    #contenedor-abajo .anuncio {
+      width: 100%;
+      background-color: #d1d1d1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+	
+	  
+
+   #contenedor-abajo  {
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 0px;
+      background-color: none;
+      flex-wrap: wrap;
+      width: 100%; /* Recuadro principal más ancho */
+    }
+
+    #contenedor-abajo .todo {
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 20px;
+      background-color: none;
+      flex-wrap: wrap;
+      width: 100%; /* Recuadro principal más ancho */
+    }
+
+    #contenedor-abajo .recuadro-anuncio {
+      width: 100%; /* Ajustar al tamaño del anuncio */
+    }
+
+    #contenedor-abajo .contenido {
+      width: 100%; /* Recuadro principal más ancho */
+    }
+
+    /* Media query para pantallas mayores a 900px */
+    @media (min-width: 901px) {
+      #contenedor-abajo .contenedor-recuadros {
+        flex-direction: row; /* Cambiar a fila horizontal */
+        justify-content: space-between;
+      }
+	  
+  #contenedor-abajo .contenedor-secundarios {
+        width: 80%; /* Ajustar el ancho para que se ubiquen en fila */
+      }
+
+      #contenedor-abajo .recuadro, #contenedor-abajo .recuadro-secundario {
+        width: 100%; /* Ajustar el ancho para que se ubiquen en fila */
+      }
+
+      #contenedor-abajo .contenedor-secundarios {
+        flex-direction: row; /* Asegurarse de que los recuadros secundarios estén en fila */
+      }
+    }
+
+    @media (max-width: 500px) {
+ /* Cambiar la dirección de los recuadros para que estén en columna */
+      #contenedor-abajo   .contenedor-recuadros {
+    flex-direction: column;
+    gap: 3px;  /* Espaciado entre los recuadros */
+  }
+
+     #contenedor-abajo    .recuadro, .recuadro-secundario {
+    width: 100%; /* Hacer que cada recuadro ocupe el 100% del ancho */
+    padding: 10px; /* Ajustar el espaciado */
+  }
+
+     #contenedor-abajo    .imagen,    #conte   .imagen-principal {
+    height: 140px; /* Reducir la altura de las imágenes */
+	 margin-bottom: -5px;
+  }
+
+      #contenedor-abajo   .textos h1 {
+    font-size: 18px; /* Reducir tamaño del título */
+  }
+
+     #contenedor-abajo    .textos h3 {
+    font-size: 8px; /* Reducir tamaño del subtítulo */
+
+  }
+  
+     #contenedor-abajo   .imagen-principal {
+      margin-bottom: -10px;
+    }
+
+  /* Ajustar el contenedor de los recuadros secundarios */
+     #contenedor-abajo    .contenedor-secundarios {
+    flex-direction: column;  /* Asegurar que los recuadros secundarios estén en columna */
+    gap: 14px;
+  }
+
+  /* Asegurarse de que el anuncio ocupe todo el ancho en pantallas pequeñas */
+       #contenedor-abajo  .recuadro-anuncio {
+    width: 100%;
+  }
+        #contenedor-abajo     .todo {
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 2px;
+      background-color: none;
+      flex-wrap: wrap;
+       width: 100%; /* Recuadro principal más ancho */
+    }
+	     #contenedor-abajo   {
+      background-color: #ffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+    }
+	
+	   #contenedor-abajo   .linea {
+    width: 99%;      /* Ajusta el ancho de la línea */
+    border: 0;        /* Elimina el borde predeterminado */
+    border-top: 1px solid #000; /* Establece el grosor y color de la línea */
+    margin: 0px auto;  /* Centra la línea en la página y agrega un margen superior e inferior */
+}
+
+      #contenedor-abajo  .rectangulo {
+      font-size: 10px;
+	     padding: -5px 5px -5px 5px;
+    }
+
+      #contenedor-abajo     .rectangulo.icono {
+      font-size: 10px;
+    }
+
+}
