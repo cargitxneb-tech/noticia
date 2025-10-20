@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiénes Somos | CNEBX Noticias</title>
+  <meta name="description" content="CNEBX Noticias: medio digital independiente que informa sobre política, deportes, economía, tecnología y más, con cobertura en Perú, México, Colombia, Argentina, Estados Unidos y el mundo.">
+
+  <style>
+    /* === ESTILOS BASE === */
+    :root {
+      --color-principal: #003366;       /* Azul editorial sobrio */
+      --color-acento: #d71920;          /* Rojo acento periodístico */
+      --color-fondo: #ffffff;
+      --color-texto: #1b1b1b;
+      --max-width: 1200px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      background: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.7;
+    }
+
+    /* === SECCIÓN PRINCIPAL === */
+    section#quienes-somos {
+      position: relative;
+      padding: 100px 20px 80px;
+      background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 100%);
+      overflow: hidden;
+    }
+
+    section#quienes-somos::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 300px;
+      height: 300px;
+      background: rgba(215, 25, 32, 0.08);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .qs-container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* === IMAGEN === */
+    .qs-image {
+      flex: 1 1 45%;
+    }
+
+    .qs-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+    }
+
+    /* === CONTENIDO === */
+    .qs-content {
+      flex: 1 1 50%;
+    }
+
+    .qs-content h2 {
+      font-size: 2.6em;
+      font-weight: 800;
+      color: var(--color-principal);
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .qs-content h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--color-acento);
+      border-radius: 2px;
+    }
+
+    .qs-content h3 {
+      color: var(--color-acento);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.95em;
+      letter-spacing: 1.2px;
+      margin-bottom: 6px;
+    }
+
+    .qs-content p {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      text-align: justify;
+    }
+
+    .qs-content p strong {
+      color: var(--color-principal);
+    }
+
+    /* === ENLACES === */
+    a {
+      color: #004c99; /* Azul más claro que combina */
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--color-acento);
+    }
+
+    /* === FRASE DESTACADA === */
+    .qs-quote {
+      background: var(--color-principal);
+      color: #fff;
+      padding: 18px 24px;
+      border-left: 5px solid var(--color-acento);
+      border-radius: 6px;
+      font-style: italic;
+      font-weight: 500;
+      margin-top: 25px;
+      text-align: center;
+      font-size: 1.15em;
+    }
+
+    /* === RESPONSIVO === */
+    @media (max-width: 900px) {
+      .qs-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .qs-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .qs-content {
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- SECCIÓN QUIÉNES SOMOS -->
+  <section id="quienes-somos">
+    <div class="qs-container">
+
+      <!-- Imagen lateral -->
+      <div class="qs-image">
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1000&q=80" alt="Redacción periodística moderna">
+      </div>
+
+      <!-- Contenido -->
+      <div class="qs-content">
+        <h3>Periodismo Independiente y Global</h3>
+        <h2>Quiénes Somos</h2>
+
+        <p>
+          En <strong>CNEBX Noticias</strong> creemos que informar es más que comunicar hechos: es ofrecer contexto, análisis y una visión clara del mundo que nos rodea. Somos un medio digital independiente comprometido con la <strong>veracidad, la objetividad y la libertad de prensa</strong>.
+        </p>
+
+        <p>
+          Cubrimos noticias de <strong>política, deportes, economía, sociedad, cultura y tecnología</strong>, con especial enfoque en la actualidad de <strong>Perú, México, Colombia, Argentina y Estados Unidos</strong>, sin dejar de lado la mirada internacional a través de nuestra sección global.
+        </p>
+
+        <p>
+          En <strong>CNEBX Noticias</strong> trabajamos en español e inglés, adaptando cada contenido según el público y la relevancia local. Nuestra red de colaboradores y redactores garantiza una cobertura amplia, actual y responsable.
+        </p>
+
+        <p>
+          Formamos parte del ecosistema <strong>CNEBX Media</strong>, que incluye:
+        </p>
+
+        <ul>
+          <li>
+            <strong><a href="https://blog.cnebx.com" target="_blank">CNEBX Blog</a>:</strong>
+            espacio de análisis sobre finanzas, seguros, salud, religión y más temas de interés social.
+          </li>
+          <li>
+            <strong><a href="https://extra.cnebx.com" target="_blank">CNEBX Extra</a>:</strong>
+            plataforma de comparaciones, recomendaciones, tecnología, aplicaciones y tendencias digitales.
+          </li>
+        </ul>
+
+        <p>
+          Nuestro propósito es simple: <strong>mantenerte informado con independencia, rigor y perspectiva</strong>. Porque cada noticia merece contexto, y cada lector merece la verdad.
+        </p>
+
+        <div class="qs-quote">
+          “Contamos los hechos. Explicamos el mundo. Defendemos la verdad.”
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
