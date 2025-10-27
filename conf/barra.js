@@ -1,5 +1,5 @@
 // Inyectar el widget CNEBX dinámicamente
-fetch('cnebx.html')
+fetch('/conf/barra.html')
   .then(response => response.text())
   .then(html => {
     const target = document.getElementById('cnebx-container') || document.body;
