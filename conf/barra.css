@@ -6,7 +6,7 @@
 }
 
 /* --- ANUNCIO --- */
-#cnebx-widget .cnebx-anuncio {
+.cnebx-anuncio {
   width: 99%;
   background-color: #fff;
   display: flex;
