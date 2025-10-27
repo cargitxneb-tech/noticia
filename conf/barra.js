@@ -1,10 +1,9 @@
 // Inyectar el widget CNEBX dinámicamente
-fetch('/conf/barra.html')
+fetch('cnebx.html')
   .then(response => response.text())
   .then(html => {
-    const container = document.createElement('div');
-    container.innerHTML = html;
-    document.body.appendChild(container);
+    const target = document.getElementById('cnebx-container') || document.body;
+    target.innerHTML = html;
 
     // Cargar CSS
     const link = document.createElement('link');
@@ -12,12 +11,13 @@ fetch('/conf/barra.html')
     link.href = 'cnebx.css';
     document.head.appendChild(link);
 
-    // Esperar a que el DOM se actualice antes de ejecutar el resto
+    // Esperar un momento para que se renderice el HTML antes de activar scripts
     setTimeout(() => iniciarCNEBX(), 100);
   })
   .catch(err => console.error('Error al cargar el widget CNEBX:', err));
 
-// ---- Funciones principales del widget ----
+
+// ---- Lógica completa del widget ----
 function iniciarCNEBX() {
   const cnebxBtn = document.getElementById('cnebx-hambtn');
   const cnebxPanel = document.getElementById('cnebx-panel');
