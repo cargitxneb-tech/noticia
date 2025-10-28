@@ -250,8 +250,8 @@
 
 /* Contenedor general del pie de página */
 #footer-wrapper {
-    background-color: #ffffff;
-    margin-top: 20px;
+    background-color: #000;
+    margin-top: 0px;
     width: 100%;
     box-shadow: none;
     padding: 0;
