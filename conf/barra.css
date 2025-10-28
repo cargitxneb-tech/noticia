@@ -246,7 +246,7 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-}
+
 
 /* Contenedor general del pie de página */
 #footer-wrapper {
