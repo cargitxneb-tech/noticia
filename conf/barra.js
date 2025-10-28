@@ -71,3 +71,11 @@ function iniciarCNEBX() {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("footer/footer.html")
+    .then(res => res.text())
+    .then(html => document.body.insertAdjacentHTML("beforeend", html))
+    .catch(err => console.error("Error al cargar el footer:", err));
+});
+
