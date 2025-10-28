@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Global Noticias - Contacto</title>
+    <style>
+        body {
+            background-color: #f5f6fa;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .contenedor-principal {
+            width: 95%;
+            max-width: 1100px;
+            box-sizing: border-box;
+        }
+
+        .recuadro {
+            background-color: #ffffff;
+            border-top: 4px solid #1a3d7c;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            padding: 40px 5%;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .recuadro h2 {
+            color: #1a3d7c;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .descripcion-contacto {
+            color: #555;
+            font-size: 16px;
+            margin: 0 auto 35px auto;
+            line-height: 1.8;
+            max-width: 900px;
+        }
+
+        .rectangulo {
+            background-color: #eef2ff;
+            border: 1px solid #1a3d7c;
+            border-radius: 8px;
+            margin: 10px auto;
+            max-width: 900px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            color: #333;
+            padding: 15px 25px;
+            box-sizing: border-box;
+        }
+
+        .rectangulo a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .rectangulo a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-section {
+            width: 100%;
+            margin-top: 30px;
+            padding: 40px 5%;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-top: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #1a3d7c;
+            box-shadow: 0 0 12px rgba(26,61,124,0.2);
+        }
+
+        .faq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 25px;
+        }
+
+        .faq-question {
+            color: #1a3d7c;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .faq-icon {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a3d7c;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 25px 20px 25px;
+            color: #333;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .rectangulo {
+                flex-direction: column;
+                text-align: left;
+                align-items: flex-start;
+            }
+            .rectangulo span, .rectangulo a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+
+        <!-- ===== RECUADRO DE CONTACTO ===== -->
+        <section class="recuadro">
+            <h2>Contactos</h2>
+            <p class="descripcion-contacto">
+                En <strong>Mundo Global Noticias</strong> valoramos la comunicación con nuestros lectores y colaboradores.  
+                Si deseas enviarnos información, resolver una duda, reportar un problema con el sitio o explorar oportunidades para <strong>anunciar tu negocio o marca</strong>,  
+                puedes contactarnos a través de los siguientes medios oficiales.  
+                Nuestro equipo estará encantado de atenderte y ofrecerte una respuesta oportuna.
+            </p>
+
+            <div class="rectangulo">
+                <span>Contacto por Gmail:</span>
+                <span>contacto@mundoglobal.com</span>
+            </div>
+
+            <div class="rectangulo">
+                <span>Contacto por Facebook:</span>
+                <a href="https://facebook.com/MundoGlobalNoticias" target="_blank">MundoGlobalNoticias</a>
+            </div>
+        </section>
+
+        <!-- ===== PREGUNTAS FRECUENTES ===== -->
+        <section class="faq-section">
+            <div class="faq-container">
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question">¿Qué tipo de noticias publican?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        Publicamos noticias nacionales e internacionales sobre política, economía, sociedad, tecnología, cultura y deportes.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question">¿De qué países cubren noticias?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        Nos enfocamos en <strong>México, Perú, Colombia, Argentina</strong> y <strong>Estados Unidos</strong>, además de temas internacionales de relevancia global.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question">¿Cómo puedo enviar una nota o colaborar?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        Puedes escribirnos a <strong>redaccion@mundoglobal.com</strong> con tus artículos, fotografías o propuestas de colaboración periodística.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question">¿Tienen presencia en redes sociales?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, nos encuentras en Facebook, X (Twitter), Instagram y YouTube como <strong>@MundoGlobalNoticias</strong>.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <div class="faq-question">¿Puedo anunciar mi marca en su portal?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        Claro, ofrecemos espacios publicitarios y notas patrocinadas. Escríbenos a <strong>marketing@mundoglobal.com</strong> para más información.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Controla el comportamiento del acordeón FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                faqItems.forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-answer').style.display = 'none';
+                        faq.querySelector('.faq-icon').textContent = '+';
+                    }
+                });
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-icon');
+                const isActive = item.classList.contains('active');
+                item.classList.toggle('active');
+                answer.style.display = isActive ? 'none' : 'block';
+                icon.textContent = isActive ? '+' : '−';
+            });
+        });
+    </script>
+
+</body>
+</html>
