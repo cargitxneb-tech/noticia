@@ -246,6 +246,7 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+}
 
 #p5040 footer {
     text-align: center;
