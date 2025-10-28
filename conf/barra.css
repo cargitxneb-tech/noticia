@@ -251,7 +251,7 @@
 /* Contenedor general del pie de página */
 #footer-wrapper {
     background-color: #ffffff;
-    margin-top: 80px; /* separación con el contenido superior */
+    margin-top: 70px; /* separación con el contenido superior */
     width: 100%;
     box-shadow: none;
 }
@@ -326,9 +326,4 @@
     transform: scale(1.15);
 }
 
-/* 📱 Responsive */
-@media (max-width: 768px) {
-    #footer-wrapper footer {
-        padding: 25px 20px;
-    }
-}
+
