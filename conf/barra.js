@@ -73,9 +73,13 @@ function iniciarCNEBX() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("footer/footer.html")
+  fetch("/conf/footer.html")
     .then(res => res.text())
-    .then(html => document.body.insertAdjacentHTML("beforeend", html))
-    .catch(err => console.error("Error al cargar el footer:", err));
+    .then(html => {
+      const container = document.getElementById("footer-container");
+      if (container) {
+        container.innerHTML = html;
+      }
+    })
+    .catch(() => {});
 });
-
