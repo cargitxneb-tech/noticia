@@ -248,35 +248,54 @@
 }
 }
 
-#p5040 footer {
-    text-align: center;
-    padding: 14px 0;
-    font-size: 14px;
+/* Contenedor principal del footer */
+#p5040 {
     background-color: #ffffff;
-    color: #333;
-    position: relative;
-    bottom: 0;
     width: 100%;
     box-shadow: none;
 }
 
+/* Línea divisoria visible */
 #p5040 .footer-divider {
     position: relative;
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
+    background-color: #e0e0e0; /* Color gris claro visible */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
+/* Logo centrado sobre la línea */
 #p5040 .footer-divider img {
     background-color: #ffffff;
     padding: 0 20px;
     height: 40px;
 }
 
+/* Footer visible (100px de alto) */
+#p5040 footer {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Contenedor invisible que añade 30px extra de espacio */
+#p5040 .footer-space {
+    height: 30px;
+    background: transparent;
+    visibility: hidden;
+}
+
+/* Estilos de enlaces */
 #p5040 footer a {
     color: #333;
     text-decoration: none;
@@ -286,6 +305,7 @@
     text-decoration: underline;
 }
 
+/* Iconos sociales */
 #p5040 .social-icons a {
     margin: 0 10px;
     display: inline-block;
@@ -303,4 +323,3 @@
     background-color: #2d4373;
     transform: scale(1.2);
 }
-
