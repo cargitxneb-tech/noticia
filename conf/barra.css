@@ -251,20 +251,27 @@
 /* Contenedor general del pie de página */
 #footer-wrapper {
     background-color: #ffffff;
-    margin-top: 70px; /* separación con el contenido superior */
+    margin-top: 80px;
     width: 100%;
     box-shadow: none;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Línea divisoria superior con logo al centro */
 #footer-wrapper .footer-divider {
     position: relative;
-    width: 100%;
+    width: 100vw; /* ocupa todo el ancho de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
     height: 2px;
-    background-color: #4e3c80;
+    background-color: #6953a6;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0; /* elimina cualquier margen vertical */
+    padding: 0;
 }
 
 #footer-wrapper .footer-divider img {
@@ -278,7 +285,7 @@
     background-color: #ffffff;
     color: #333;
     width: 100%;
-    min-height: 100px;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,7 +299,7 @@
     text-align: center;
 }
 
-/* Información de texto */
+/* Información */
 #footer-wrapper .footer-info {
     margin-bottom: 15px;
 }
@@ -325,5 +332,6 @@
     background-color: #2d4373;
     transform: scale(1.15);
 }
+
 
 
