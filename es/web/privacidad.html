@@ -5,36 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Privacidad | CNEBX Noticias</title>
   <meta name="description" content="Política de Privacidad de CNEBX Noticias: conoce cómo protegemos tus datos personales, el uso de cookies, publicidad, derechos de usuario y servicios asociados.">
+
+  <!-- Archivo externo que no tocamos -->
   <link rel="stylesheet" href="/conf/barra.css">
 
   <style>
-    :root {
+    /* === AISLAMIENTO TOTAL AL BLOQUE #politica === */
+    #politica {
       --color-principal: #003366;
       --color-fondo: #ffffff;
       --color-texto: #1b1b1b;
       --max-width: 1200px;
-    }
 
-    body {
-      margin: 0;
-      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-      background: var(--color-fondo);
-      color: var(--color-texto);
-      line-height: 1.7;
-    }
-
-    section#politica {
       position: relative;
       padding: 100px 20px 80px;
       background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 100%);
+      color: var(--color-texto);
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
     }
 
-    .pol-container {
+    /* Contenedor interno */
+    #politica .pol-container {
       max-width: var(--max-width);
       margin: 0 auto;
     }
 
-    h1 {
+    /* Títulos */
+    #politica h1 {
       font-size: 2.6em;
       font-weight: 800;
       color: var(--color-principal);
@@ -43,7 +41,7 @@
       text-align: center;
     }
 
-    h1::after {
+    #politica h1::after {
       content: "";
       position: absolute;
       bottom: -8px;
@@ -56,7 +54,7 @@
       opacity: 0.5;
     }
 
-    h2 {
+    #politica h2 {
       color: var(--color-principal);
       margin-top: 40px;
       font-size: 1.4em;
@@ -64,38 +62,40 @@
       padding-left: 10px;
     }
 
-    p {
+    /* Párrafos y enlaces */
+    #politica p {
       font-size: 1.05em;
       text-align: justify;
       margin-bottom: 20px;
     }
 
-    a {
+    #politica a {
       color: var(--color-principal);
       text-decoration: none;
       font-weight: 600;
     }
 
-    a:hover {
+    #politica a:hover {
       text-decoration: underline;
     }
 
-    ul {
+    #politica ul {
       margin-left: 20px;
     }
 
-    .pol-contacto {
+    #politica .pol-contacto {
       margin-top: 40px;
       text-align: center;
       font-size: 1.1em;
       color: var(--color-principal);
     }
 
+    /* Responsive */
     @media (max-width: 900px) {
-      h1 {
+      #politica h1 {
         font-size: 2.2em;
       }
-      h2 {
+      #politica h2 {
         font-size: 1.2em;
       }
     }
@@ -103,11 +103,10 @@
 </head>
 
 <body>
+  <!-- Widget o barra -->
+  <div id="cnebx-container"></div>
 
-      <!-- Widget o barra -->
-    <div id="cnebx-container"></div>
-
-  
+  <!-- Sección aislada -->
   <section id="politica">
     <div class="pol-container">
       <h1>Política de Privacidad</h1>
@@ -123,9 +122,7 @@
       </p>
 
       <h2>2. Información que recopilamos</h2>
-      <p>
-        Podemos recopilar la siguiente información cuando visitas nuestro sitio:
-      </p>
+      <p>Podemos recopilar la siguiente información cuando visitas nuestro sitio:</p>
       <ul>
         <li>Datos de navegación (dirección IP, tipo de navegador, páginas visitadas, tiempo de permanencia).</li>
         <li>Datos de cookies y tecnologías similares utilizadas por Google AdSense y nuestros socios.</li>
@@ -133,9 +130,7 @@
       </ul>
 
       <h2>3. Uso de la información</h2>
-      <p>
-        La información recopilada se utiliza con los siguientes fines:
-      </p>
+      <p>La información recopilada se utiliza con los siguientes fines:</p>
       <ul>
         <li>Mejorar la experiencia del usuario y personalizar el contenido mostrado.</li>
         <li>Mostrar anuncios relevantes y medir su rendimiento mediante Google AdSense y otros servicios de terceros.</li>
@@ -157,16 +152,12 @@
       </p>
 
       <h2>6. Enlaces a otros sitios</h2>
-      <p>
-        Este sitio puede contener enlaces hacia otros dominios o subdominios del ecosistema CNEBX:
-      </p>
+      <p>Este sitio puede contener enlaces hacia otros dominios o subdominios del ecosistema CNEBX:</p>
       <ul>
         <li><a href="https://blog.cnebx.com/politica-de-privacidad" target="_blank">Política de Privacidad de CNEBX Blog</a></li>
         <li><a href="https://extra.cnebx.com/politica-de-privacidad" target="_blank">Política de Privacidad de CNEBX Extra</a></li>
       </ul>
-      <p>
-        Cada uno de estos sitios cuenta con su propia política de privacidad y tratamiento de datos independiente.
-      </p>
+      <p>Cada uno de estos sitios cuenta con su propia política de privacidad y tratamiento de datos independiente.</p>
 
       <h2>7. Protección de datos</h2>
       <p>
@@ -175,17 +166,13 @@
       </p>
 
       <h2>8. Derechos del usuario</h2>
-      <p>
-        El usuario tiene derecho a:
-      </p>
+      <p>El usuario tiene derecho a:</p>
       <ul>
         <li>Solicitar acceso, rectificación o eliminación de sus datos personales.</li>
         <li>Oponerse al tratamiento de sus datos con fines publicitarios.</li>
         <li>Revocar el consentimiento otorgado previamente.</li>
       </ul>
-      <p>
-        Para ejercer cualquiera de estos derechos, puede escribirnos a <strong>cnebxnoticias@gmail.com</strong>.
-      </p>
+      <p>Para ejercer cualquiera de estos derechos, puede escribirnos a <strong>cnebxnoticias@gmail.com</strong>.</p>
 
       <h2>9. Modificaciones</h2>
       <p>
@@ -193,9 +180,7 @@
       </p>
 
       <h2>10. Aceptación de la política</h2>
-      <p>
-        Al acceder y navegar por este sitio web, el usuario declara haber leído, comprendido y aceptado los términos de esta Política de Privacidad.
-      </p>
+      <p>Al acceder y navegar por este sitio web, el usuario declara haber leído, comprendido y aceptado los términos de esta Política de Privacidad.</p>
 
       <div class="pol-contacto">
         Última actualización: Octubre 2025<br>
@@ -204,9 +189,10 @@
     </div>
   </section>
 
-    <div id="footer-container"></div>
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Script externo -->
   <script src="/conf/barra.js"></script>
-  
-  
 </body>
 </html>
