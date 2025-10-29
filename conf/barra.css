@@ -288,7 +288,7 @@ body {
 
 /* Footer principal */
 #footer-wrapper footer {
-    background-color: #ffffff;
+    background-color: #000;
     color: #333;
     width: 100%;
     min-height: auto;
