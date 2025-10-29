@@ -1,71 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    
-    <!-- Fuentes y otros recursos -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artículos</title>
 
-    <!-- Enlace a tu archivo CSS externo -->
-    <link rel="stylesheet" href="barra/barra.css">
-    <link rel="stylesheet" href="barra/barrabao.css">
+<style>
+/* === AISLAMIENTO COMPLETO DE LA SECCIÓN #articulos === */
+#articulos {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Contenedor general */
+#articulos .article-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta de artículo */
+#articulos .article-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 4px solid #4a90e2;
+}
+
+#articulos .article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+#articulos .article-card h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+#articulos .article-summary {
+  color: #555;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  margin-bottom: 15px;
+}
+
+#articulos .read-more {
+  text-decoration: none;
+  color: white;
+  background-color: #4a90e2;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+#articulos .read-more:hover {
+  background-color: #357ABD;
+}
+
+#articulos h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Anuncio -->
-    <div class="anuncio">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8980056699793558" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8980056699793558" data-ad-slot="8577461929" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+<!-- Sección aislada -->
+<section id="articulos">
+
+  <h1>Últimos Artículos</h1>
+
+  <div class="article-section">
+
+    <div class="article-card">
+      <h3>Cómo mejorar la productividad sin estrés</h3>
+      <div class="article-summary">Descubre estrategias prácticas para gestionar tu tiempo sin sentirte abrumado y mantener un equilibrio saludable.</div>
+      <a href="#" class="read-more">Leer más →</a>
     </div>
 
-    <!-- Aquí se inyecta el contenido del menú desde barra/barra.html -->
-        <div id="dev"></div>
-        <div id="abajo"></div> <!-- Aquí se insertará el contenido HTML externo -->
-    
-    <!-- Cargar el archivo JavaScript de la barra -->
-    <script src="barra/barra.js"></script>
+    <div class="article-card">
+      <h3>Tendencias tecnológicas para el 2026</h3>
+      <div class="article-summary">Un vistazo a las innovaciones que transformarán el panorama digital: IA generativa, realidad mixta y más.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
 
-    <!-- Inyectar el archivo barra/barrapc.html con JavaScript -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('barra/barrapc.html')
-                .then(response => response.text())
-                .then(data => {
-                    // Inyectar el contenido de barra/barrapc.html en el div con id="dev"
-                    document.getElementById('dev').innerHTML = data;
-                    
-                    // Inicializar los menús una vez se haya inyectado el contenido
-                    initMenu();  // Para el menú de escritorio
-                    initMenu2(); // Para el menú móvil
-                })
-                .catch(error => {
-                    console.error("Error al cargar el archivo barra/barrapc.html:", error);
-                });
-        });
-    </script>
-       <script>
-        // Función para cargar un archivo HTML
-        async function cargarHTML() {
-            try {
-                const response = await fetch('barra/barrabajo.html'); // Ruta del archivo HTML externo
-                if (!response.ok) throw new Error('No se pudo cargar el archivo.');
+    <div class="article-card">
+      <h3>Cómo crear hábitos sostenibles</h3>
+      <div class="article-summary">Pequeños cambios diarios pueden marcar la diferencia. Aprende cómo formar hábitos que duren.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
 
-                const html = await response.text(); // Obtener el contenido HTML
-                document.getElementById('abajo').innerHTML = html; // Insertarlo en el div
+    <div class="article-card">
+      <h3>Alimentos que mejoran tu energía diaria</h3>
+      <div class="article-summary">Conoce qué alimentos potencian tu concentración y vitalidad durante el día.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
 
-            } catch (error) {
-                console.error('Error al cargar el archivo:', error);
-                document.getElementById('abajo').innerHTML = '<p>Error al cargar el contenido.</p>';
-            }
-        }
+    <div class="article-card">
+      <h3>Cómo emprender con bajo presupuesto</h3>
+      <div class="article-summary">Ideas y estrategias para lanzar tu proyecto sin grandes inversiones iniciales.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
 
-        // Llamar a la función para cargar el archivo cuando cargue la página
-        window.onload = cargarHTML;
-    </script>
-    
+    <div class="article-card">
+      <h3>Aprender más rápido con técnicas efectivas</h3>
+      <div class="article-summary">Métodos comprobados para estudiar y retener información más eficientemente.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Cómo organizar tus finanzas personales</h3>
+      <div class="article-summary">Consejos para tomar control de tus gastos y aumentar tus ahorros mensuales.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Destinos económicos para 2025</h3>
+      <div class="article-summary">Explora lugares increíbles sin gastar una fortuna en tus próximas vacaciones.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Avances científicos que cambiarán el mundo</h3>
+      <div class="article-summary">De la biotecnología a la exploración espacial: los hitos del futuro cercano.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Cómo mantenerte enfocado en tus metas</h3>
+      <div class="article-summary">Estrategias para superar la procrastinación y mantener la motivación alta.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>El impacto del arte en la sociedad moderna</h3>
+      <div class="article-summary">Cómo el arte influye en nuestras emociones y la forma en que entendemos el mundo.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Claves del marketing digital actual</h3>
+      <div class="article-summary">Técnicas y herramientas esenciales para destacar tu marca en línea.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Cómo gestionar la ansiedad en tiempos difíciles</h3>
+      <div class="article-summary">Aprende técnicas sencillas para controlar el estrés y recuperar la calma.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Startups que están revolucionando el mercado</h3>
+      <div class="article-summary">Conoce nuevas empresas con ideas disruptivas que están cambiando industrias enteras.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+    <div class="article-card">
+      <h3>Acciones cotidianas para cuidar el planeta</h3>
+      <div class="article-summary">Pequeños gestos que, sumados, tienen un gran impacto ambiental positivo.</div>
+      <a href="#" class="read-more">Leer más →</a>
+    </div>
+
+  </div>
+</section>
+
 </body>
 </html>
