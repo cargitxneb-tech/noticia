@@ -262,7 +262,7 @@
 /* Línea divisoria superior con logo al centro */
 #footer-wrapper .footer-divider {
     position: relative;
-    width: 100vw; /* ocupa todo el ancho de la pantalla */
+    width: 100%; /* ocupa todo el ancho de la pantalla */
     left: 50%;
     transform: translateX(-50%);
     height: 2px;
