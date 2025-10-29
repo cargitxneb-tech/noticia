@@ -8,33 +8,28 @@
   <link rel="stylesheet" href="/conf/barra.css">
 
   <style>
-    :root {
+    /* === AISLAMIENTO TOTAL DEL BLOQUE #terminos === */
+    #terminos {
       --color-principal: #003366;
       --color-fondo: #ffffff;
       --color-texto: #1b1b1b;
       --max-width: 1200px;
-    }
 
-    body {
-      margin: 0;
-      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-      background: var(--color-fondo);
-      color: var(--color-texto);
-      line-height: 1.7;
-    }
-
-    section#terminos {
       position: relative;
       padding: 100px 20px 80px;
       background: linear-gradient(180deg, #f8f9fb 0%, #ffffff 100%);
+      color: var(--color-texto);
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
     }
 
-    .term-container {
+    #terminos .term-container {
       max-width: var(--max-width);
       margin: 0 auto;
     }
 
-    h1 {
+    /* TITULARES */
+    #terminos h1 {
       font-size: 2.6em;
       font-weight: 800;
       color: var(--color-principal);
@@ -43,7 +38,7 @@
       text-align: center;
     }
 
-    h1::after {
+    #terminos h1::after {
       content: "";
       position: absolute;
       bottom: -8px;
@@ -56,7 +51,7 @@
       opacity: 0.5;
     }
 
-    h2 {
+    #terminos h2 {
       color: var(--color-principal);
       margin-top: 40px;
       font-size: 1.4em;
@@ -64,38 +59,40 @@
       padding-left: 10px;
     }
 
-    p {
+    /* PÁRRAFOS Y ENLACES */
+    #terminos p {
       font-size: 1.05em;
       text-align: justify;
       margin-bottom: 20px;
     }
 
-    a {
+    #terminos a {
       color: var(--color-principal);
       text-decoration: none;
       font-weight: 600;
     }
 
-    a:hover {
+    #terminos a:hover {
       text-decoration: underline;
     }
 
-    ul {
+    #terminos ul {
       margin-left: 20px;
     }
 
-    .term-contacto {
+    #terminos .term-contacto {
       margin-top: 40px;
       text-align: center;
       font-size: 1.1em;
       color: var(--color-principal);
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
-      h1 {
+      #terminos h1 {
         font-size: 2.2em;
       }
-      h2 {
+      #terminos h2 {
         font-size: 1.2em;
       }
     }
@@ -104,8 +101,9 @@
 
 <body>
   <!-- Widget o barra -->
-    <div id="cnebx-container"></div>
-  
+  <div id="cnebx-container"></div>
+
+  <!-- SECCIÓN AISLADA -->
   <section id="terminos">
     <div class="term-container">
       <h1>Términos y Condiciones</h1>
@@ -138,9 +136,7 @@
         <li>Fallas técnicas, interrupciones o pérdida de datos.</li>
         <li>Contenidos externos, comentarios o enlaces de terceros.</li>
       </ul>
-      <p>
-        El uso de la información publicada en este sitio se realiza bajo responsabilidad exclusiva del usuario.
-      </p>
+      <p>El uso de la información publicada en este sitio se realiza bajo responsabilidad exclusiva del usuario.</p>
 
       <h2>4. Enlaces externos</h2>
       <p>
@@ -197,7 +193,10 @@
     </div>
   </section>
 
-      <div id="footer-container"></div>
-    <script src="/conf/barra.js"></script>
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Script externo -->
+  <script src="/conf/barra.js"></script>
 </body>
 </html>
