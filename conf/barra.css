@@ -1,3 +1,9 @@
+/* === BODY SIN MARGEN === */
+body {
+  margin: 0;             
+  padding: 0;     
+}
+
 #cnebx-widget * { box-sizing: border-box; margin: 0; padding: 0; }
 #cnebx-widget {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
