@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CNEBX Noticias — Portal en Construcción</title>
+
+  <!-- SEO -->
+  <meta name="description" content="CNEBX Noticias está en construcción. Muy pronto encontrarás un portal moderno de noticias locales y globales con enfoque en Perú, México, Colombia, Argentina, USA hispano y cobertura internacional. Disponible en español e inglés." />
+  <meta name="keywords" content="CNEBX, noticias, actualidad, internacional, Perú, México, Colombia, Argentina, USA hispano, global" />
+  <meta name="author" content="CNEBX" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "CNEBX Noticias",
+    "description": "Portal de noticias locales e internacionales en construcción. Enfocado en países hispanos y cobertura global. Español e inglés.",
+    "inLanguage": ["es","en"]
+  }
+  </script>
+
+  <style>
+    :root{
+      --blue-900:#0a2a4f;
+      --blue-700:#1557a1;
+      --light:#f7f9fc;
+      --text:#1a1f25;
+      --muted:#687280;
+      --radius:14px;
+      --max:1050px;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    body{
+      margin:0;
+      background:#ffffff;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* WRAPPER */
+    .wrap{
+      max-width:var(--max);
+      margin:50px auto;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:40px;
+    }
+
+    /* HEADER */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .logo{
+      width:64px;
+      height:64px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--blue-900),var(--blue-700));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:22px;
+      font-weight:800;
+      box-shadow:0 6px 22px rgba(20,70,140,.22);
+    }
+    .brand-info h1{
+      margin:0;
+      font-size:22px;
+      color:var(--blue-900);
+      letter-spacing:.4px;
+    }
+    .brand-info p{
+      margin:3px 0 0;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* HERO */
+    .hero{
+      background:var(--light);
+      border:1px solid rgba(15,60,120,.1);
+      border-radius:var(--radius);
+      padding:36px 26px;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+    .hero h2{
+      margin:0;
+      font-size:28px;
+      color:var(--blue-900);
+    }
+    .hero p{
+      margin:0;
+      max-width:780px;
+      color:var(--text);
+      line-height:1.6;
+    }
+    .hero small{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    .card{
+      background:#fff;
+      border-radius:12px;
+      padding:22px;
+      border:1px solid rgba(15,60,120,.08);
+      box-shadow:0 4px 16px rgba(5,20,40,.06);
+      transition:.2s ease;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 12px 28px rgba(10,40,80,.12);
+    }
+    .card h3{
+      margin:0;
+      font-size:18px;
+      color:var(--blue-900);
+      font-weight:700;
+    }
+    .card p{
+      margin:10px 0 0;
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:10px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:760px){
+      .grid{grid-template-columns:1fr;}
+      .hero h2{font-size:24px;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="brand">
+    <div class="logo">CN</div>
+    <div class="brand-info">
+      <h1>CNEBX Noticias</h1>
+      <p>Portal informativo — En construcción</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Estamos construyendo el portal CNEBX Noticias</h2>
+    <p>
+      Muy pronto estará disponible un portal informativo moderno y rápido, centrado en noticias locales e internacionales.
+      Cobriremos países hispanos como <strong>Perú, México, Colombia y Argentina</strong>, además de <strong>USA hispano</strong>, 
+      junto con una sección global para el resto del mundo. Disponible en español e inglés.
+    </p>
+    <small>Esta página es solo la presentación oficial. No incluye enlaces, redes sociales ni políticas.</small>
+  </section>
+
+  <section class="grid">
+
+    <div class="card">
+      <h3>Noticias Perú</h3>
+      <p>Cobertura de actualidad nacional, economía, sociedad y sucesos locales.</p>
+    </div>
+
+    <div class="card">
+      <h3>Noticias México</h3>
+      <p>Información reciente, reportes locales y noticias destacadas del país.</p>
+    </div>
+
+    <div class="card">
+      <h3>Noticias Colombia</h3>
+      <p>Actualidad política, social y nacional con enfoque informativo claro.</p>
+    </div>
+
+    <div class="card">
+      <h3>Noticias Argentina</h3>
+      <p>Lo más relevante del país: economía, sociedad, cultura y más.</p>
+    </div>
+
+    <div class="card">
+      <h3>USA Hispano</h3>
+      <p>Noticias para la comunidad hispana en Estados Unidos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Noticias Globales</h3>
+      <p>Información internacional verificada y cobertura del panorama mundial.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> CNEBX Noticias — Portal en construcción.
+  </footer>
+
+</div>
+
+</body>
+</html>
